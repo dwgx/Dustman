@@ -25,3 +25,9 @@
 
 ### 步骤
 1. 克隆或下载仓库：
+2. https://github.com/dwgx/Dustman
+3. 您需要安装的库
+4. PyQt5==5.15.10 
+5. PyQt-Fluent-Widgets==1.7.0 
+6. psutil==6.0.0
+7. 运行Main.py
