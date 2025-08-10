@@ -1,0 +1,9 @@
+{
+    "theme": "LIGHT",
+    "shortcuts": {
+        "rename": 16777265,
+        "delete": 16777223
+    },
+    "program_notifications_enabled": true,
+    "windows_notifications_enabled": true
+}
