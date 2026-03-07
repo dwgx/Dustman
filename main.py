@@ -1912,7 +1912,7 @@ class FileManagementWidget(QWidget):
             message = f"您确定要删除 '{file_paths_to_delete[0]}' 吗？此操作不可撤销！"
 
         dialog = Dialog("确认删除", message, self)
-        if dialog.exec_() == QDialog.Accepted:
+        if dialog.exec_() != QDialog.Accepted:
             self.log_widget.append_log(f"用户取消删除操作。")
             return
 
