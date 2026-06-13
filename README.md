@@ -2,22 +2,43 @@
 
 Python/PyQt Windows cleaner utility.
 
-## Status
+Dustman is a local desktop cleaner experiment: a small Windows utility UI for previewing and running cleanup workflows without turning the project into a giant system optimizer.
 
-Experimental desktop tool. Use carefully and test before running it against important files.
+## Current Scope
 
-## Setup
+- Python desktop app.
+- UI stack: PyQt / PyQt-Fluent style dependencies from `requirements.txt`.
+- Main entry: `main.py`.
+- Target platform: Windows.
 
-Create a Python virtual environment and install the dependencies declared by the project.
+## What It Does
 
-## Usage
+- Provides a desktop UI for local cleanup workflows.
+- Keeps cleanup behavior in the local app instead of a remote service.
+- Serves as a place to test safer Windows cleaner interactions: clear prompts, readable status, and review-before-action behavior.
 
-Run from a local checkout. Review cleanup targets before confirming any deletion or modification.
+## Safety Notes
 
-## Configuration
+Cleaner tools can damage useful files if the target list is wrong.
 
-Do not commit machine-local paths, account data, tokens, or private cleanup lists.
+- Review cleanup targets before confirming deletion or modification.
+- Test in a disposable folder or VM before using on important data.
+- Keep machine-specific paths and local config out of commits.
+- If `config.json` is used locally, check it before pushing and avoid personal paths or secrets.
+
+## Run Locally
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python main.py
+```
+
+## Project Status
+
+Experimental Windows utility. Good enough to keep, but it should grow with preview, confirmation, and rollback-first thinking.
 
 ## License
 
-No license has been declared yet. Treat this repository as all rights reserved until a license is added.
+MIT.
